@@ -1,23 +1,17 @@
 # Tadabbur
 
-Tadabbur is a spiritual AI assistant that leverages the Qur'an for emotional and semantic therapy using NLP and LLMs.
+Tadabbur is a spiritual AI assistant leveraging the Qur'an for emotional support and reflection.
 
-## 📁 Folder Structure
+## Files
 
-- `therapy_module/qur'an_therapy.py`: Emotion-based verse retrieval using sentence transformers.
-- `spiritual_agent/spiritual_helper.py`: LLM-powered assistant with spiritual tone, using GloVe + FAISS.
-- `semantic_engine/semantic_search.py`: Classic semantic similarity engine for Qur'anic verse retrieval.
+- `qur'an_therapy.py`: Uses semantic search to recommend verses based on emotional prompts.
+- `spiritual_helper.py`: Enhances spiritual queries using Gemini + GloVe embeddings and FAISS.
+- `semantic_search.py`: Simple semantic similarity tool using MiniLM and FAISS.
 
-## 📂 Data (Required)
+## Dataset Requirement
 
-Make sure to manually provide:
-- `Qur'an Dataset.xlsx` — Qur'anic verses in tabular form.
-- `glove.6B.100d.txt` — GloVe pre-trained embeddings.
+Make sure you have the dataset file `Qur'an Dataset.xlsx` and optionally GloVe embeddings (`glove.6B.100d.txt`).
 
-Place them inside a `data/` folder locally.
+## Note
+This project requires models like `sentence-transformers` and optionally `google-generativeai`.
 
-## 🧠 Dependencies
-
-Install with:
-```bash
-pip install -r requirements.txt
