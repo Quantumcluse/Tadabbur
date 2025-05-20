@@ -1,15 +1,5 @@
-# streamlit_app.py
-
 import streamlit as st
 
-st.set_page_config(
-    page_title = "Home"
-)
-# Page title
-st.title("My First Streamlit App")
-
-# Sidebar
-st.sidebar.success("Select a page above")
-
-
-
+def show_homepage():
+    st.title("Welcome to the Quranic AI Assistant")
+    st.write("This is the homepage of your app. Use the sidebar to explore other features.")
