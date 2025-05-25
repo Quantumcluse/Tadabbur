@@ -8,6 +8,10 @@ Original file is located at
 """
 
 !pip install google-generativeai pandas faiss-cpu scikit-learn
+!pip install python-dotenv
+
+from google.colab import drive
+drive.mount('/content/drive')
 
 !pip install faiss-cpu
 
@@ -23,14 +27,15 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 # Download VADER lexicon if not already downloaded
 nltk.download('vader_lexicon')
 
-# Securely load Gemini API key
+from google.colab import files
+uploaded = files.upload()  # Upload .env manually every time runtime resets
+
+# Load environment variables
 from dotenv import load_dotenv
-import os
+load_dotenv()  # Loads .env into os.environ
 
-load_dotenv()  # This reads .env file into environment
+# Configure Gemini with secure API key
 api_key = os.getenv("GEMINI_API_KEY")
-
-# Then use:
 genai.configure(api_key=api_key)
 
 
