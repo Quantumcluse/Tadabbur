@@ -21,7 +21,8 @@ st.write("Talk to a chatbot trained on Quranic knowledge.")
 load_dotenv('C:\\Users\\Natasha\\Tadabbur\\spiritual_agent\\.env')
 
 # Configure Gemini with secure API key
-api_key = os.getenv("GEMINI_API_KEY")
+api_key = 
+st.secrets["GEMINI_API_KEY"]
 if not api_key:
     st.error("GEMINI_API_KEY not found in environment variables. Please set it in your .env file.")
     st.stop() # Stop the app if API key is missing
